@@ -81,37 +81,24 @@ cp .env.example .env
 
 Edit the `.env` file with your configuration:
 
-```env
-# Server Configuration
-NODE_ENV=development
-PORT=3000
-CLIENT_URL=http://localhost:3000
+### 3. Environment Configuration
 
-# Database Configuration
-MONGODB_URI=mongodb://localhost:27017/soet-university
-
-# JWT Configuration
-JWT_SECRET=your-super-secret-jwt-key-here
-JWT_EXPIRE=7d
-
-# Email Configuration (SMTP)
-SMTP_HOST=smtp.gmail.com
-SMTP_PORT=587
-SMTP_USER=your-email@gmail.com
-SMTP_PASS=your-app-password
-FROM_EMAIL=noreply@soetuniversity.com
-FROM_NAME=SOET University
-
-# Cloudinary Configuration
-CLOUDINARY_CLOUD_NAME=your-cloudinary-cloud-name
-CLOUDINARY_API_KEY=your-cloudinary-api-key
-CLOUDINARY_API_SECRET=your-cloudinary-api-secret
-
-# Admin Configuration
-ADMIN_EMAIL=admin@soetuniversity.com
-ADMIN_PASSWORD=admin123
+Copy the example environment file and configure it:
+```bash
+cp .env.example .env
 ```
 
+Edit the `.env` file with your own configuration values. **Do not use the example values in production!**
+
+See `.env.example` for all required environment variables and their descriptions.
+
+**Important Configuration Notes:**
+- Generate a strong `JWT_SECRET` using a secure random string generator
+- Change the default `ADMIN_PASSWORD` immediately after first setup
+- Use your own Cloudinary account credentials
+- Configure your SMTP settings with your email provider
+- Never commit the `.env` file to version control
+```
 ### 4. Database Setup
 
 Start MongoDB service and create default admin user:
