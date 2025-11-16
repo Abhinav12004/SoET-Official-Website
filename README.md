@@ -74,43 +74,19 @@ npm install
 
 ### 3. Environment Configuration
 
-Copy the example environment file and configure it:
+⚠️ **Security Warning**: Never commit your actual `.env` file to version control. It contains sensitive credentials and secrets.
+
+Copy the example environment file and configure it with your actual values:
 ```bash
 cp .env.example .env
 ```
 
-Edit the `.env` file with your configuration:
+Edit the `.env` file with your configuration. See `.env.example` for all available configuration options and detailed comments on each setting.
 
-```env
-# Server Configuration
-NODE_ENV=development
-PORT=3000
-CLIENT_URL=http://localhost:3000
-
-# Database Configuration
-MONGODB_URI=mongodb://localhost:27017/soet-university
-
-# JWT Configuration
-JWT_SECRET=your-super-secret-jwt-key-here
-JWT_EXPIRE=7d
-
-# Email Configuration (SMTP)
-SMTP_HOST=smtp.gmail.com
-SMTP_PORT=587
-SMTP_USER=your-email@gmail.com
-SMTP_PASS=your-app-password
-FROM_EMAIL=noreply@soetuniversity.com
-FROM_NAME=SOET University
-
-# Cloudinary Configuration
-CLOUDINARY_CLOUD_NAME=your-cloudinary-cloud-name
-CLOUDINARY_API_KEY=your-cloudinary-api-key
-CLOUDINARY_API_SECRET=your-cloudinary-api-secret
-
-# Admin Configuration
-ADMIN_EMAIL=admin@soetuniversity.com
-ADMIN_PASSWORD=admin123
-```
+**Important**: 
+- Replace all placeholder values with your actual credentials
+- Keep your `.env` file secure and never share it publicly
+- The `.env` file is already excluded from git via `.gitignore`
 
 ### 4. Database Setup
 
